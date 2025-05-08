@@ -6,7 +6,7 @@ const App = () => {
   const [number, setNumber] = useState(1);
 
   const changenumber = () => {
-    if (number < 3) {
+    if (number < 5) {
       setNumber(number + 1);
     } else {
       setNumber(1);
@@ -17,7 +17,7 @@ const App = () => {
 //
     <View>
   
-  <Pressable onPress={() => changenumber()}>
+  {number === 1?<Pressable onPress={() => changenumber()}>
         
         <Text
       
@@ -28,10 +28,75 @@ const App = () => {
               : number === 2
               ? styles.paragraphred
               : styles.paragraphgreen
+              
           }>
         This is my first interest. this is {number}
         </Text>
-      </Pressable>
+      </Pressable>:null}
+
+      {number === 2?<Pressable onPress={() => changenumber()}>
+        
+      <Text
+      
+          style={
+              // Argument -- Inside of a Style Tag
+            number === 1
+              ? styles.paragraph
+              : number === 2
+              ? styles.paragraphred
+              : styles.paragraphgreen
+          }>
+        This is my second interest. this is {number}
+        </Text>
+      </Pressable>:null}
+
+      {number === 3?<Pressable onPress={() => changenumber()}>
+        
+      <Text
+      
+          style={
+              // Argument -- Inside of a Style Tag
+            number === 1
+              ? styles.paragraph
+              : number === 2
+              ? styles.paragraphred
+              : styles.paragraphgreen
+          }>
+        This is my third interest. this is {number}
+        </Text>
+      </Pressable>:null}
+
+      {number === 4?<Pressable onPress={() => changenumber()}>
+        
+      <Text
+      
+          style={
+              // Argument -- Inside of a Style Tag
+            number === 1
+              ? styles.paragraph
+              : number === 2
+              ? styles.paragraphred
+              : styles.paragraphgreen
+          }>
+        This is my fourth interest. this is {number}
+        </Text>
+      </Pressable>:null}
+
+      {number === 5?<Pressable onPress={() => changenumber()}>
+        
+      <Text
+      
+          style={
+              // Argument -- Inside of a Style Tag
+            number === 1
+              ? styles.paragraph
+              : number === 2
+              ? styles.paragraphred
+              : styles.paragraphgreen
+          }>
+        This is my fifth interest. this is {number}
+        </Text>
+      </Pressable>:null}
 
  <ScrollView>
  {number === 1?<View style={styles.container}>
@@ -46,14 +111,54 @@ const App = () => {
         />
     </View>:null}
     {number === 2?<View style={styles.container2}>
-      <Text style={styles.paragraph}>
-        Change code in the editor and watch it change on your phone! Save to get a shareable url.
+    <Text style={styles.paragraph}>
+        My second interest is I really enjoy playing video games.
       </Text>
+
+      <Image
+          source={{ uri: 'https://i.pinimg.com/736x/aa/44/3b/aa443b034495f447ff2d7797a18b79f2.jpg' }}
+          style={{ width: 300, height: 300 }}
+
+          
+        />
     </View>:null}
-    {number === 3?<View style={styles.container}>
+    {number === 3?<View style={styles.container3}>
       <Text style={styles.paragraph}>
-        Change code in the editor and watch it change on your phone! Save to get a shareable url.
+        My third interest is I really enjoy writing.
       </Text>
+
+      <Image
+          source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqpA6cDUhGC4Ng_CTs2n0cuVjxpSVkTg3y_g&s' }}
+          style={{ width: 300, height: 300 }}
+
+          
+        />
+        
+    </View>:null}
+
+
+    {number === 4?<View style={styles.container4}>
+      <Text style={styles.paragraph}>
+      My second interest is I enjoy drawing in my free time.
+      </Text>
+      <Image
+          source={{ uri: 'https://bingedrawing.com/wp-content/uploads/2022/09/portrait-study-1024x733.png.webp' }}
+          style={{ width: 300, height: 300 }}
+
+          
+        />
+    </View>:null}
+
+    {number === 5?<View style={styles.container5}>
+      <Text style={styles.paragraph}>
+        One of my other interests is that I really enjoy listening to music!
+      </Text>
+        <Image
+          source={{ uri: 'https://static.vecteezy.com/system/resources/previews/028/269/275/non_2x/happy-cute-girl-listening-to-music-music-therapy-concept-illustration-vector.jpg' }}
+          style={{ width: 300, height: 300 }}
+
+          
+        />
     </View>:null}
     </ScrollView>
     </View>
@@ -70,14 +175,35 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: 'blue',
+    backgroundColor: '#f0ece2',
     padding: 48,
   },
   container2: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: 'pink',
-    padding: 8,
+    backgroundColor: '#444444',
+    padding: 48,
+  },
+
+  container3: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#8f64b1',
+    padding: 48,
+  },
+
+  container4: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#abcdef',
+    padding: 48,
+  },
+
+  container5: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#f9cb9c',
+    padding: 48,
   },
 
   paragraph: {
